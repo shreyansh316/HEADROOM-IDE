@@ -1,0 +1,9 @@
+node_modules/
+dist/
+release/
+.integration-backups/
+.headroom/
+.headroom-extensions/
+.test-headroom-extensions/
+*.log
+.DS_Store

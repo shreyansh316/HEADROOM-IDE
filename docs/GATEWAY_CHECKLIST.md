@@ -1,0 +1,40 @@
+# HEADROOM AI API Gateway Implementation Checklist
+
+- [ ] 1. Core Models & Registry
+  - [x] Create documentation and architecture in `docs/GATEWAY_ARCHITECTURE.md`
+  - [ ] Implement `src/main/services/gateway/ModelRegistry.js` with comprehensive metadata for OpenAI, Anthropic, Gemini, and compatible models
+  - [ ] Support custom administrator models and dynamic model registration
+- [ ] 2. Provider Adapters
+  - [ ] Implement base adapter contract `src/main/services/gateway/adapters/BaseAdapter.js`
+  - [ ] Implement `src/main/services/gateway/adapters/OpenAIAdapter.js` (Chat & SSE streaming)
+  - [ ] Implement `src/main/services/gateway/adapters/AnthropicAdapter.js` (Messages API & SSE delta streaming)
+  - [ ] Implement `src/main/services/gateway/adapters/GeminiAdapter.js` (generateContent & streamGenerateContent)
+  - [ ] Implement `src/main/services/gateway/adapters/CompatibleAdapter.js` (with SSRF & URL destination security)
+  - [ ] Implement `src/main/services/gateway/adapters/MockAdapter.js` (Deterministic offline testing adapter)
+- [ ] 3. Intelligent Model Router
+  - [ ] Implement `src/main/services/gateway/ModelRouter.js`
+  - [ ] Implement routing profiles (`economy`, `balanced`, `quality`, `coding`, `reasoning`, `long-context`)
+  - [ ] Implement capability matching (tools, context length, modalities) and decision explanation logging
+- [ ] 4. Resilience, Retries & Fallback
+  - [ ] Implement `src/main/services/gateway/GatewayResilience.js`
+  - [ ] Implement bounded exponential backoff with jitter for transient errors (429, 5xx, timeouts)
+  - [ ] Implement cascading fallback to secondary eligible models preserving task capabilities
+- [ ] 5. Usage Tracking & Budget Enforcement
+  - [ ] Implement `src/main/services/gateway/UsageTracker.js`
+  - [ ] Integrate with SQLite `ai_usages` repository for persistent auditing
+  - [ ] Enforce request and task token/cost limits
+- [ ] 6. Secure Credential Management & SSRF Protection
+  - [ ] Implement `src/main/services/gateway/CredentialManager.js`
+  - [ ] Implement URL validation blocking private IPs and cloud metadata (`169.254.169.254`)
+  - [ ] Redact secrets from IPC responses and log files
+- [ ] 7. Gateway Service & HTTP Server
+  - [ ] Implement `src/main/services/gateway/GatewayService.js` orchestrating adapters, registry, and routing
+  - [ ] Implement `src/main/services/gateway/GatewayServer.js` (HTTP loopback `/v1/chat/completions`, `/v1/models`, `/health`)
+- [ ] 8. Integration with HEADROOM Workforce & IDE
+  - [ ] Connect `HeadroomEngineAdapter` to `GatewayService`
+  - [ ] Wire IPC channels in `src/main/index.js` and `src/main/preload.js`
+  - [ ] Upgrade IDE `SettingsView.js` with AI Providers & Models configuration, connection testing, and usage telemetry
+- [ ] 9. Automated Testing & Verification
+  - [ ] Create unit tests for registry, adapters, router, resilience, SSRF validation, and usage tracking
+  - [ ] Create integration test for HTTP endpoint `/v1/chat/completions` with SSE streaming
+  - [ ] Verify Quality Gates: `check:ts`, `lint`, `typecheck`, `test`, `smoke`, `package:dir`

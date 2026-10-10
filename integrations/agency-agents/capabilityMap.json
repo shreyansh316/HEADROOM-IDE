@@ -1,0 +1,36 @@
+{
+  "source": "D:/codex room/agency-agents-main/agency-agents-main",
+  "license": "MIT",
+  "mappings": [
+    {
+      "agencySkill": "engineering-code-reviewer.md",
+      "headroomPosition": "STAFF_ENGINEER_REVIEW",
+      "division": "Engineering",
+      "purpose": "Static code analysis, security auditing, and AST hygiene verification"
+    },
+    {
+      "agencySkill": "engineering-git-workflow-master.md",
+      "headroomPosition": "RELEASE_COORDINATOR",
+      "division": "Operations",
+      "purpose": "Git branch safety, commit message compliance, and unstaged change audits"
+    },
+    {
+      "agencySkill": "testing-test-automation-engineer.md",
+      "headroomPosition": "QA_AUTOMATION_LEAD",
+      "division": "Testing & QA",
+      "purpose": "Regression testing, test suite expansion, and vitest assertions"
+    },
+    {
+      "agencySkill": "testing-evidence-collector.md",
+      "headroomPosition": "VERIFICATION_SPECIALIST",
+      "division": "Verification",
+      "purpose": "Compiling verification reports, exit code captures, and test logs"
+    },
+    {
+      "agencySkill": "engineering-technical-writer.md",
+      "headroomPosition": "DOCUMENTATION_LEAD",
+      "division": "Architecture & Governance",
+      "purpose": "Delivery report maintenance and architectural change logs"
+    }
+  ]
+}

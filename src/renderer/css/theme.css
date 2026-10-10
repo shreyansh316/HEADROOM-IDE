@@ -1,0 +1,200 @@
+:root {
+    /* ==========================================================================
+       HEADROOM IDE — Centralized Design Token System
+       Sleek, Professional Modern Developer-Tool Aesthetic
+       ========================================================================== */
+
+    /* 1. Application Chrome & Title Bar — Dark Charcoal */
+    --chrome-bg: #1E1E1E;
+    --chrome-panel: #252526;
+    --chrome-hover: #2D2D30;
+    --chrome-selected: #37373D;
+    --chrome-border: #383838;
+    --chrome-text: #CCCCCC;
+    --chrome-muted: #929292;
+    --chrome-accent: #6479D8;
+    --titlebar-height: 38px;
+
+    /* 2. Working Surfaces — Coordinated Light Theme */
+    --workspace-bg: #F3F5F8;
+    --surface-primary: #FFFFFF;
+    --surface-secondary: #EDF0F5;
+    --surface-tertiary: #E6EAF1;
+    --workspace-border: #D6DCE5;
+    --text-primary: #202631;
+    --text-secondary: #687385;
+    --text-muted: #8F97A3;
+    --text-inverse: #FFFFFF;
+
+    /* 3. Restrained Accents & Semantics */
+    --accent: #6479D8;
+    --accent-hover: #5368C7;
+    --accent-light: rgba(100, 121, 216, 0.12);
+    --accent-focus-ring: rgba(100, 121, 216, 0.25);
+    --success: #27835A;
+    --success-bg: #EAF6F0;
+    --warning: #A86B12;
+    --warning-bg: #FEF7EC;
+    --error: #C44747;
+    --error-bg: #FDF2F2;
+
+    /* Compatibility aliases for existing components */
+    --bg-app: var(--workspace-bg);
+    --bg-surface: var(--surface-primary);
+    --bg-surface-secondary: var(--surface-secondary);
+    --bg-surface-hover: var(--surface-tertiary);
+    --bg-surface-active: #DFE3E8;
+    --border-color: var(--workspace-border);
+    --border-subtle: #ECEFF3;
+    --border-focus: var(--accent);
+    --accent-primary: var(--accent);
+    --status-success: var(--success);
+    --status-success-bg: var(--success-bg);
+    --status-warning: var(--warning);
+    --status-warning-bg: var(--warning-bg);
+    --status-error: var(--error);
+    --status-error-bg: var(--error-bg);
+    --status-info: #2B6CB0;
+    --status-info-bg: #EBF8FF;
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-error: var(--error);
+
+    /* 4. Typography Scale */
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "Cascadia Code", "Fira Code", "Consolas", "Courier New", monospace;
+
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-md: 13px;
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+
+    /* 5. Crisp Square Geometry (0–2px radius) */
+    --radius-none: 0px;
+    --radius-sm: 1px;
+    --radius-md: 2px;
+    --radius-lg: 2px;
+
+    /* Flat crisp borders — no heavy drop shadows */
+    --shadow-none: none;
+    --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    /* Layout Dimensions */
+    --titlebar-height: 38px;
+    --activitybar-width: 44px;
+    --statusbar-height: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-ui);
+    font-size: var(--font-size-md);
+    color: var(--text-primary);
+    background-color: var(--workspace-bg);
+    overflow: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Crisp Square Controls */
+button {
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--workspace-border);
+    background: var(--surface-primary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background-color 0.12s, border-color 0.12s;
+}
+
+button:hover {
+    background-color: var(--surface-secondary);
+    border-color: var(--workspace-border);
+}
+
+button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-focus-ring);
+    border-color: var(--accent);
+}
+
+button.primary {
+    background-color: var(--accent);
+    color: var(--text-inverse);
+    border-color: var(--accent);
+    font-weight: 500;
+}
+
+button.primary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+button.danger {
+    background-color: var(--error);
+    color: var(--text-inverse);
+    border-color: var(--error);
+}
+
+button.danger:hover {
+    background-color: #B03A3A;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: var(--font-size-md);
+    color: var(--text-primary);
+    background: var(--surface-primary);
+    border: 1px solid var(--workspace-border);
+    border-radius: var(--radius-sm);
+    padding: 6px 10px;
+    outline: none;
+    transition: border-color 0.12s, box-shadow 0.12s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-focus-ring);
+}
+
+/* Minimal Crisp Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD2DC;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A0AAB8;
+}
+
+/* Dark Chrome Scrollbars */
+.sidebar ::-webkit-scrollbar-thumb,
+.activity-bar ::-webkit-scrollbar-thumb,
+.terminal-container ::-webkit-scrollbar-thumb {
+    background: #343A45;
+}
+
+.sidebar ::-webkit-scrollbar-thumb:hover,
+.activity-bar ::-webkit-scrollbar-thumb:hover,
+.terminal-container ::-webkit-scrollbar-thumb:hover {
+    background: #464E5D;
+}

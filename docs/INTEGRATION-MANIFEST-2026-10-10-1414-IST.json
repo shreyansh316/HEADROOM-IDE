@@ -1,0 +1,52 @@
+{
+  "manifestVersion": 1,
+  "createdAt": "2026-10-10T14:14:00+05:30",
+  "phase": "audit complete; implementation authorized by task brief",
+  "repositories": {
+    "ide": {
+      "path": "D:\\codex room\\IDE",
+      "branch": "ai/gemini/headroom-ide",
+      "gitStatus": "pre-existing user modifications and untracked work; see INTEGRATION-AUDIT-2026-10-10-1414-IST.md"
+    },
+    "headroom": {
+      "path": "D:\\codex room\\headroom",
+      "branch": "ai/gemini/headroom-ide",
+      "gitStatus": "clean at audit start"
+    },
+    "agencyAgents": {
+      "path": "D:\\codex room\\agency-agents-main\\agency-agents-main",
+      "gitStatus": "unavailable; source path and parent are not Git worktrees",
+      "snapshotFileCount": 381,
+      "canonicalDivisionCount": 18,
+      "agentProfileCount": 282,
+      "pythonRuntimeEntryPoint": null,
+      "pythonDependencyManifest": null
+    }
+  },
+  "policy": {
+    "noCommitsOrHistoryRewrites": true,
+    "preserveAllExistingUserChanges": true,
+    "neverReadOrCopyHeadroomEnv": true,
+    "noPackageLockMerge": true,
+    "singleMissionScheduler": "HEADROOM engine application layer",
+    "singleProviderGateway": "IDE GatewayService",
+    "agencyIntegration": "profile definitions adapted as data into existing HEADROOM persisted agents; no parallel worker/scheduler"
+  },
+  "preReplacementBackups": {
+    "root": ".integration-backups/2026-10-10-1414-IST/source",
+    "verification": "Each backup was SHA-256 compared byte-for-byte against its source before implementation edits.",
+    "files": [
+      { "path": "scripts/build-engine-bridge.js", "sha256": "0F0BF6995B40790E5AC9A7EE9920E4DF6C42EF63A214B3038E2904AFE96A68A5" },
+      { "path": "src/integration/headroom/HeadroomEngineAdapter.js", "sha256": "63D2ECB777A9E0AE735706A2C8F0CB005447ED89CF1A8AF417CB0B0F51201264" },
+      { "path": "src/main/services/HeadroomAdapter.js", "sha256": "44DEA70E918F09ED67F98ECBF877D3F5DD6D2DF5929125B529DB75EBAB9570AF" },
+      { "path": "src/main/services/WorkspaceService.js", "sha256": "D9D8E5141DC36D2777B294382BAF1B7B5A3D11BDD5BE0B08E87F8A8B587241BF" },
+      { "path": "src/main/services/gateway/CredentialManager.js", "sha256": "A770CFADB9F1A8E94B24724F2FCA14445739DEF93E0840A39DFD360E3000EA92" },
+      { "path": "src/main/services/gateway/GatewayService.js", "sha256": "61345AE006860ED6609A70A34DDD17F1E6EBDC6EEDA47DD31854C4A0E5B4E577" },
+      { "path": "src/main/index.js", "sha256": "7807DAD560FE3BB707A119F3C117F8FB7788BFCFCBFE14DA0879D0F1558E4454" },
+      { "path": "src/main/preload.js", "sha256": "0FEE2480C57974CCB224F3CC89D889908479E0EDED17B634CCC732E426046C9E" },
+      { "path": "src/renderer/js/app.js", "sha256": "5DACB4EB54D68DA58D9225957B44B1BFCB86A0EFA3B8DBB32C27AD3CD225D0B5" },
+      { "path": "src/renderer/js/agent/agentManager.js", "sha256": "FD0B87DB193C739C2E8EBF86190B461BF74506C4A6DCFA6C3045F458E1EFB2EF" }
+    ]
+  },
+  "migrationPlan": "See INTEGRATION-AUDIT-2026-10-10-1414-IST.md. New integration source roots will be additive; existing databases, package locks, release artifacts, user docs, and unrelated renderer work will not be replaced."
+}

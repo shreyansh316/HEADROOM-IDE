@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEADROOM IDE</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Region A: Application Title Bar -->
+        <header class="titlebar" id="app-titlebar" aria-label="Application header"></header>
+
+        <!-- Main Body: 5 Regions -->
+        <main class="main-body">
+            <!-- Region B: Activity Bar -->
+            <nav class="activity-bar" id="activity-bar">
+                <div class="activity-group">
+                    <button class="activity-btn active" id="activity-btn-explorer" title="Explorer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                            <polyline points="13 2 13 9 20 9"></polyline>
+                        </svg>
+                    </button>
+                    <button class="activity-btn" id="activity-btn-git" title="Source Control">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="6" y1="3" x2="6" y2="15"></line>
+                            <circle cx="18" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M18 9a9 9 0 0 1-9 9"></path>
+                        </svg>
+                    </button>
+                    <button class="activity-btn" id="activity-btn-languages" title="Languages & Runtimes">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </button>
+                    <button class="activity-btn" id="activity-btn-extensions" title="Extensions (Open VSX Marketplace)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                </div>
+                <div class="activity-group">
+                    <button class="activity-btn" id="activity-btn-settings" title="Settings">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <span id="sidebar-title">Explorer</span>
+                    <div style="display: flex; gap: 4px;" id="sidebar-actions">
+                        <button style="padding: 2px 5px; font-size: 11px;" id="btn-new-file" title="New File">+</button>
+                        <button style="padding: 2px 5px; font-size: 11px;" id="btn-refresh-tree" title="Refresh Tree">&#8635;</button>
+                    </div>
+                </div>
+                <div class="sidebar-content" id="sidebar-explorer-content"></div>
+                <div class="sidebar-content" id="sidebar-git-content" style="display: none;"></div>
+                <div class="sidebar-content" id="sidebar-languages-content" style="display: none;"></div>
+                <div class="sidebar-content" id="sidebar-extensions-content" style="display: none;"></div>
+                <div class="sidebar-content" id="sidebar-settings-content" style="display: none;"></div>
+            </aside>
+
+            <!-- Splitter 1 -->
+            <div class="splitter-h" id="splitter-sidebar"></div>
+
+            <!-- Region C: Center Workspace (Editor & Terminal) -->
+            <section class="center-workspace" id="center-workspace">
+                <!-- Region C: Editor Workspace -->
+                <div class="editor-area" id="editor-area">
+                    <div class="editor-tabs-bar" id="editor-tabs-bar"></div>
+                    <div class="editor-breadcrumbs" id="editor-breadcrumbs"></div>
+                    <div class="editor-container" id="editor-container"></div>
+                </div>
+
+                <!-- Splitter 2 -->
+                <div class="splitter-v" id="splitter-bottom"></div>
+
+                <!-- Region D: Integrated Terminal Panel -->
+                <div class="bottom-panel" id="bottom-panel">
+                    <div class="panel-header">
+                        <div class="panel-tabs" role="tablist" aria-label="Bottom Panel Views">
+                            <span class="panel-tab active" id="tab-terminal" role="tab" tabindex="0" aria-selected="true">Terminal</span>
+                            <span class="panel-tab" id="tab-problems" role="tab" tabindex="0" aria-selected="false">Problems <span class="badge" id="problems-count-badge" style="display:none; margin-left:4px; font-size:10px; padding:0 5px; border-radius:10px; background:var(--status-error); color:#fff;">0</span></span>
+                            <span class="panel-tab" id="tab-output" role="tab" tabindex="0" aria-selected="false">Output</span>
+                            <span class="panel-tab" id="tab-debug" role="tab" tabindex="0" aria-selected="false">Debug Console</span>
+                            <span class="panel-tab" id="tab-usage" role="tab" tabindex="0" aria-selected="false">Usage & Cost</span>
+                            <span class="panel-tab" id="tab-workflows" role="tab" tabindex="0" aria-selected="false">Workflows</span>
+                            <span class="panel-tab" id="tab-diagnostics" role="tab" tabindex="0" aria-selected="false">Diagnostics</span>
+                        </div>
+                        <div class="panel-actions">
+                            <!-- Terminal Actions -->
+                            <div id="terminal-actions" style="display: flex; gap: 4px;">
+                                <button id="terminal-clear-btn" style="padding: 2px 6px; font-size: 11px;">Clear</button>
+                                <button class="danger" id="terminal-kill-btn" style="padding: 2px 6px; font-size: 11px;">Kill</button>
+                            </div>
+                            <!-- Output Actions -->
+                            <div id="output-actions" style="display: none; gap: 4px;">
+                                <button id="output-clear-btn" style="padding: 2px 6px; font-size: 11px;">Clear</button>
+                                <button id="output-cancel-btn" class="danger" style="display:none; padding: 2px 6px; font-size: 11px;">Cancel Run</button>
+                            </div>
+                            <!-- Debug Actions -->
+                            <div id="debug-actions" style="display: none; gap: 4px;">
+                                <button id="debug-continue-btn" title="Continue / Resume" style="padding: 2px 6px; font-size: 11px; color: var(--status-success);">&#9654; Continue</button>
+                                <button id="debug-stepover-btn" title="Step Over (F10)" style="padding: 2px 6px; font-size: 11px;">&#8618; Step Over</button>
+                                <button id="debug-stepinto-btn" title="Step Into (F11)" style="padding: 2px 6px; font-size: 11px;">&#8600; Step Into</button>
+                                <button id="debug-stepout-btn" title="Step Out (Shift+F11)" style="padding: 2px 6px; font-size: 11px;">&#8599; Step Out</button>
+                                <button id="debug-pause-btn" title="Pause Execution" style="padding: 2px 6px; font-size: 11px;">&#10074;&#10074; Pause</button>
+                                <button id="debug-stop-btn" class="danger" title="Stop Debug Session (Shift+F5)" style="padding: 2px 6px; font-size: 11px;">&#9632; Stop</button>
+                            </div>
+                            <!-- Workflow Actions -->
+                            <div id="workflow-actions" style="display: none; gap: 4px;">
+                                <button id="wf-refresh-btn" style="padding: 2px 6px; font-size: 11px;">&#8635; Refresh</button>
+                            </div>
+                            <!-- Diagnostics Actions -->
+                            <div id="diagnostics-actions" style="display: none; gap: 4px;">
+                                <button id="diag-run-btn" style="padding: 2px 6px; font-size: 11px; color: var(--status-success);">Run Doctor</button>
+                                <button id="diag-export-btn" style="padding: 2px 6px; font-size: 11px;">Export Bundle</button>
+                                <button id="diag-backup-btn" style="padding: 2px 6px; font-size: 11px;">Create Backup</button>
+                            </div>
+                            <!-- Usage Actions -->
+                            <div id="usage-actions" style="display: none; gap: 4px;">
+                                <button id="usage-refresh-btn" style="padding: 2px 6px; font-size: 11px;">&#8635; Refresh</button>
+                                <button id="usage-export-csv-btn" style="padding: 2px 6px; font-size: 11px;">Export CSV</button>
+                                <button id="usage-export-json-btn" style="padding: 2px 6px; font-size: 11px;">Export JSON</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <!-- 1. Terminal View -->
+                        <div class="terminal-container" id="panel-view-terminal" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="terminal-output" id="terminal-output"></div>
+                            <div class="terminal-prompt-row">
+                                <span class="terminal-prompt-label" id="terminal-prompt-label">$</span>
+                                <input type="text" class="terminal-input" id="terminal-cmd-input" placeholder="Run command in workspace..." autocomplete="off">
+                            </div>
+                        </div>
+
+                        <!-- 2. Problems View -->
+                        <div id="panel-view-problems" style="display: none; flex-direction: column; height: 100%; overflow-y: auto; padding: 6px 12px; font-family: var(--font-ui); font-size: 12px;">
+                            <div id="problems-list" style="display: flex; flex-direction: column; gap: 4px;">
+                                <div style="color: var(--text-muted); font-size: 11px; padding: 12px 0;">No problems detected in workspace files.</div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Output View -->
+                        <div id="panel-view-output" style="display: none; flex-direction: column; height: 100%; background: var(--bg-surface); font-family: var(--font-mono); font-size: 12px; overflow-y: auto; padding: 8px 12px; white-space: pre-wrap;" id="runtime-output-pane">
+                            <div id="output-pane-content" style="color: var(--text-primary);">[HEADROOM Runtime Output Ready]</div>
+                        </div>
+
+                        <!-- 4. Debug Console & Inspector View -->
+                        <div id="panel-view-debug" style="display: none; flex-direction: row; height: 100%; overflow: hidden;">
+                            <div id="debug-sidebar" style="width: 280px; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; background: var(--bg-surface-secondary); overflow-y: auto; padding: 6px 8px; font-size: 11px;">
+                                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: flex; justify-content: space-between;">
+                                    <span>Call Stack</span>
+                                    <span id="debug-status-indicator" style="font-size: 10px; color: var(--text-muted);">Idle</span>
+                                </div>
+                                <div id="debug-callstack-list" style="display: flex; flex-direction: column; gap: 2px; color: var(--text-secondary); margin-bottom: 10px;">
+                                    <span style="color: var(--text-muted);">No active debug session</span>
+                                </div>
+                                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Scope Variables</div>
+                                <div id="debug-variables-list" style="display: flex; flex-direction: column; gap: 2px; font-family: var(--font-mono); color: var(--text-secondary);">
+                                    <span style="color: var(--text-muted);">No active scopes</span>
+                                </div>
+                            </div>
+                            <div id="debug-console-log" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: 11px; overflow-y: auto; background: var(--bg-surface); display: flex; flex-direction: column; gap: 4px;">
+                                <div style="color: var(--text-muted);">[V8 Inspector / Debug Adapter Console Ready]</div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Usage & Cost Dashboard View -->
+                        <div id="panel-view-usage" style="display: none; flex-direction: column; height: 100%; overflow-y: auto; padding: 12px 16px; background: var(--bg-surface); font-family: var(--font-ui);">
+                            <!-- Dynamic Content injected by UsageDashboardView -->
+                        </div>
+
+                        <!-- 6. Workflows View -->
+                        <div id="panel-view-workflows" style="display: none; flex-direction: column; height: 100%; overflow-y: auto; padding: 12px 16px; background: var(--bg-surface); font-family: var(--font-ui); gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h3 style="margin: 0; font-size: 14px; font-weight: 700; color: var(--text-primary);">Engineering Workflow Recipes</h3>
+                                    <p style="margin: 2px 0 0 0; font-size: 11px; color: var(--text-muted);">Automated, dependency-aware multi-agent engineering workflows with executive approvals.</p>
+                                </div>
+                            </div>
+                            <div id="workflows-recipe-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px;">
+                                <div style="color: var(--text-muted); font-size: 12px;">Loading workflow catalog...</div>
+                            </div>
+                            <div id="workflows-active-execution" style="display: none; background: var(--bg-surface-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 12px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-weight: 700; font-size: 12px;" id="wf-active-title">Active Workflow Execution</span>
+                                    <button id="wf-active-cancel-btn" class="danger" style="padding: 2px 8px; font-size: 11px;">Cancel Execution</button>
+                                </div>
+                                <div id="wf-active-steps" style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-family: var(--font-mono);"></div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Diagnostics & Self-Repair View -->
+                        <div id="panel-view-diagnostics" style="display: none; flex-direction: column; height: 100%; overflow-y: auto; padding: 12px 16px; background: var(--bg-surface); font-family: var(--font-ui); gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h3 style="margin: 0; font-size: 14px; font-weight: 700; color: var(--text-primary);">Environment Health Doctor & Diagnostics</h3>
+                                    <p style="margin: 2px 0 0 0; font-size: 11px; color: var(--text-muted);">Probes runtime dependencies, database integrity, process locks, and backup archives.</p>
+                                </div>
+                            </div>
+                            <div id="diagnostics-checks-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px;">
+                                <div style="color: var(--text-muted); font-size: 12px;">Click 'Run Doctor' to probe IDE environment.</div>
+                            </div>
+                            <div id="diagnostics-report-container" style="background: var(--bg-surface-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; font-family: var(--font-mono); font-size: 11px; display: none;">
+                                <div style="font-weight: 700; margin-bottom: 4px;">Diagnostic Summary:</div>
+                                <pre id="diagnostics-report-text" style="margin: 0; white-space: pre-wrap; color: var(--text-secondary);"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Splitter 3 -->
+            <div class="splitter-h" id="splitter-agent"></div>
+
+            <!-- Region E: Agent Manager (Right Panel) -->
+            <aside class="agent-panel" id="agent-panel">
+                <div id="agent-panel-content" style="height: 100%; display: flex; flex-direction: column;"></div>
+            </aside>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="statusbar" id="statusbar">
+            <div class="statusbar-left">
+                <span class="statusbar-item" id="status-workspace"></span>
+                <span class="statusbar-item" id="status-git-branch"></span>
+                <span class="statusbar-item" id="status-active-file"></span>
+                <span class="statusbar-item" id="status-file-language" style="color: var(--text-muted);"></span>
+            </div>
+            <div class="statusbar-right">
+                <span class="statusbar-item" id="status-provider"></span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bundle Script -->
+    <script src="../../dist/renderer.bundle.js"></script>
+</body>
+</html>

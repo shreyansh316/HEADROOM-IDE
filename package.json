@@ -1,0 +1,70 @@
+{
+  "name": "headroom-ide",
+  "version": "0.1.0",
+  "description": "HEADROOM IDE — Professional Agentic Desktop IDE Inspired by Antigravity",
+  "main": "src/main/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "build:bridge": "node scripts/build-engine-bridge.js",
+    "build": "node scripts/build-engine-bridge.js && node esbuild.config.js",
+    "typecheck": "node scripts/quality-gate.js typecheck",
+    "lint": "node scripts/quality-gate.js lint",
+    "check:ts": "node scripts/quality-gate.js check-ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "node scripts/smoke-test.js",
+    "package": "node scripts/build-engine-bridge.js && node esbuild.config.js && electron-builder --win --dir",
+    "package:dir": "node scripts/build-engine-bridge.js && electron-builder --win --dir"
+  },
+  "build": {
+    "appId": "com.headroom.ide",
+    "productName": "HEADROOM IDE",
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "dir"
+      ]
+    },
+    "files": [
+      "dist/**/*",
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "core/agency-agents",
+        "to": "core/agency-agents"
+      }
+    ]
+  },
+  "keywords": [
+    "headroom",
+    "ide",
+    "desktop",
+    "agentic",
+    "antigravity",
+    "ai-workforce"
+  ],
+  "author": "HEADROOM Architecture Team",
+  "license": "MIT",
+  "dependencies": {
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.12",
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/lang-json": "^6.0.2",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/search": "^6.7.2",
+    "better-sqlite3": "^11.8.1",
+    "codemirror": "^6.0.2"
+  },
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.6.0",
+    "esbuild": "^0.28.2",
+    "vitest": "^5.0.3"
+  }
+}

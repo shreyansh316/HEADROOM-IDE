@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "HEADROOM IDE",
+  "version": "0.1.0",
+  "timestamp": "2026-10-10T03:00:00Z",
+  "integrations": [
+    {
+      "id": "headroom-engine",
+      "name": "HEADROOM Engine & Workforce",
+      "origin": "D:/codex room/headroom",
+      "license": "MIT",
+      "role": "authoritative-engine",
+      "status": "integrated",
+      "attribution": "Copyright (c) Klyqor. All rights reserved.",
+      "boundary": "src/main/services/HeadroomAdapter.js and scripts/build-engine-bridge.js",
+      "capabilities": [
+        "80-agent hierarchical workforce orchestration",
+        "SQLite-backed persistent plan and task database",
+        "Deterministic event sequencing and real-time streaming",
+        "Human-in-the-loop plan approvals and file-diff verifications"
+      ],
+      "notes": "Direct native adapter bridge. Zero TypeScript in IDE application code."
+    },
+    {
+      "id": "agency-agents",
+      "name": "Agency Agents Specialized Skills",
+      "origin": "D:/codex room/agency-agents-main/agency-agents-main",
+      "license": "MIT",
+      "role": "specialized-skills",
+      "status": "adapted",
+      "attribution": "Copyright (c) 2025 AgentLand Contributors",
+      "importedSkills": [
+        "code-reviewer",
+        "git-workflow-master",
+        "test-automation-engineer",
+        "evidence-collector",
+        "technical-writer"
+      ],
+      "mappingTarget": "HEADROOM Workforce Engineering and Quality Divisions",
+      "notes": "Mapped as non-authoritarian specialized skill guidelines to enhance agent prompt generation."
+    },
+    {
+      "id": "zed-reference",
+      "name": "Zed Editor Architecture Reference",
+      "origin": "https://github.com/zed-industries/zed",
+      "license": "GPL-3.0 / AGPL-3.0 / Apache-2.0",
+      "role": "architectural-inspiration",
+      "status": "reference-only",
+      "attribution": "Copyright (c) Zed Industries, Inc.",
+      "reusableConcepts": [
+        "Minimalist dark window title bar and centered document indicator",
+        "Single-keystroke split pane workflow",
+        "Asynchronous non-blocking search indexing pipeline",
+        "Clear demarcation between editor surface and chrome"
+      ],
+      "decision": "Independent JavaScript implementation. No Rust binaries or upstream source copied into Electron distribution."
+    },
+    {
+      "id": "open-vsx-marketplace",
+      "name": "Open VSX Registry Client",
+      "origin": "https://open-vsx.org/",
+      "license": "EPL-2.0 (Registry) / Open API",
+      "role": "extension-ecosystem",
+      "status": "integrated",
+      "attribution": "Eclipse Foundation / Open VSX Community",
+      "endpoints": {
+        "search": "https://open-vsx.org/api/-/search",
+        "details": "https://open-vsx.org/api/{namespace}/{name}",
+        "versionDetails": "https://open-vsx.org/api/{namespace}/{name}/{version}",
+        "download": "https://open-vsx.org/api/{namespace}/{name}/{version}/file/{file}.vsix"
+      },
+      "capabilities": [
+        "Live search by query, publisher, and tags",
+        "Offset-based pagination (>15 results)",
+        "Verified publisher badges and accurate metrics",
+        "Security-hardened package extraction preventing path traversal",
+        "Explicit compatibility matrix (Grammars, Themes, Snippets supported)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "sourceRepository": "D:\\codex room\\headroom",
+  "sourceCommit": "2d74d7a05cc26ce04733f9001cf9963b63a6a8f0",
+  "sourceVersion": "0.1.0",
+  "importedRoots": [
+    "src/application",
+    "src/domain",
+    "src/infrastructure",
+    "src/storage",
+    "src/agents",
+    "src/shared",
+    "src/constants.js",
+    "src/core/ExecutionActivityFeed.js"
+  ],
+  "excluded": [
+    "VS Code extension host and src/core UI/commands",
+    "src/__mocks__",
+    "tests",
+    "docs",
+    "imports",
+    "node_modules",
+    "environment files",
+    "release artifacts"
+  ],
+  "runtimeDependency": "better-sqlite3",
+  "importedFileCount": 142,
+  "hash": "SHA-256",
+  "files": [
+    {
+      "path": "agents/contracts.js",
+      "sha256": "356026177c8bf93702f1ffbe7a865b7c5b08cfac9ae45b0531d1c8d175fc0f3b"
+    },
+    {
+      "path": "agents/employeeExecutionContract.js",
+      "sha256": "daa6faba7063a1bb053f776b8a4c847bef5ce2844fd0fede25c77c90e05f114e"
+    },
+    {
+      "path": "agents/index.js",
+      "sha256": "64bdda53ad244da2ec334f95a3c13511e513e2374dfc615b7701174f9271b815"
+    },
+    {
+      "path": "application/agentLifecycleManagement.js",
+      "sha256": "208a7d0767e731cdb6203bfb70268dea8e88168d0369e83ea6f1a811df1fc58d"
+    },
+    {
+      "path": "application/aiProvider.js",
+      "sha256": "c5b5d586b473e0d7111846d4ccd1bb3fd18df0ed0c7516776e0a6fdb72d104e8"
+    },
+    {
+      "path": "application/aiRequestPolicy.js",
+      "sha256": "a71766519d3c044aaefea0e18ae844a274a99181ed9edd0b87bbcbd94fb98780"
+    },
+    {
+      "path": "application/authorizedAgentRuntime.js",
+      "sha256": "168429fe872a8cdb92d539532f1a199511c92da287e8d3ac3f575065864a9631"
+    },
+    {
+      "path": "application/authorizedTaskAccess.js",
+      "sha256": "8049b47599d6b71eccc8801360ae12e8e2bef798506345d58cb8886759f5fb97"
+    },
+    {
+      "path": "application/authorizedTaskExecutor.js",
+      "sha256": "df67f97270e7bb2c6c5c2564d6d2f2d6f04cb999313d6857474b3b17b287057b"
+    },
+    {
+      "path": "application/authorizedTaskScheduler.js",
+      "sha256": "e92109d7802afc8d0c532bf85131f129570b6fe2baac7404ab6a84d6cc1bad65"
+    },
+    {
+      "path": "application/ceoExecutionControl.js",
+      "sha256": "7c0e13e129b655107934bd5d5edbf9bc257cbbbfd2737d1892125899235fc807"
+    },
+    {
+      "path": "application/ceoExecutionReport.js",
+      "sha256": "78b72df2f4510e12547403fa9dc2f0a8a72c61289ecb3f9b9e69719c044917e2"
+    },
+    {
+      "path": "application/codeExplanation.js",
+      "sha256": "e2774ddbfc0949088d8405c3c35723195cee8ab76079059e487cd7debca68fa6"
+    },
+    {
+      "path": "application/codeExplanationPrompt.js",
+      "sha256": "3c6c3ecbfee523b9bdff86a701a2d0fa2a2c9eb81e12c456cde8eecdbc1d360e"
+    },
+    {
+      "path": "application/contextAssembly.js",
+      "sha256": "85971d2c37ac07553fe58d072d8ced498c54dc3fbfd3bcbdd5823f530bc2a969"
+    },
+    {
+      "path": "application/controlledDebugging.js",
+      "sha256": "dda791625fb81bfa92969aed97f29e1dd3b6bbdce4bec7afc682c9d3dd51c7be"
+    },
+    {
+      "path": "application/createMemoryNote.js",
+      "sha256": "e2822762309d823c104b02a3445186627c6318a6af57ea2090c4dd5a534e6df3"
+    },
+    {
+      "path": "application/debuggingToolAdapter.js",
+      "sha256": "a0b2964ff27afd941e9549ff6fce943275b1a43f231939826dec71604718c869"
+    },
+    {
+      "path": "application/decisionExplanation.js",
+      "sha256": "7736a5834022327ec71d9e5eb73c5c6b32da3459cdadd0643c09009ce46f835c"
+    },
+    {
+      "path": "application/decisionRecall.js",
+      "sha256": "fbc128ce734c9790e21c1952bd3dbee6aa55b7bb4b4b5d9f07e6c11b23bfeec6"
+    },
+    {
+      "path": "application/departmentDecomposition.js",
+      "sha256": "1f0ef7bc47ab03485f0de8ff27411ddca822ec5bcbffa8f873b035bf3f202916"
+    },
+    {
+      "path": "application/diagnostics.js",
+      "sha256": "a707050c4377c6e56ecaf680ed70061efe441d45011d9cda1529079dd3f9b55c"
+    },
+    {
+      "path": "application/directorAnalysis.js",
+      "sha256": "bd5457922ed8e48790710438feb9c7a3ccde54e6d1a2ed7f236b1e449fff463e"
+    },
+    {
+      "path": "application/directorOfficeOrchestration.js",
+      "sha256": "b4c2a4b6658ec5d7551b67c7e48bc73dd073ff7d1ff7ef155e5d3715acdc5069"
+    },
+    {
+      "path": "application/directorPlanProposal.js",
+      "sha256": "91d5f2ca1de906dd01a58244a677f22d569c9752527f5a02320fa70d1e6b2036"
+    },
+    {
+      "path": "application/employeeResultVerification.js",
+      "sha256": "95698c8c107d55133ac65ad487792bf6adbe60804993f845bb65b9b7f2c112cf"
+    },
+    {
+      "path": "application/employeeTaskMemory.js",
+      "sha256": "6e674637775f523c627db6aa805dc3531c3696beef01c654ce31c2708804dd47"
+    },
+    {
+      "path": "application/engineeringDecision.js",
+      "sha256": "3bc637fb57130b69f30473f0c578f1bfdf2bfa9e1127f69a9bd62ecb87ea39b3"
+    },
+    {
+      "path": "application/engineeringReview.js",
+      "sha256": "a61dc775070f5e6e59b7d74ba43fc2ea0dc1ad600f0e23a4fc42de7e2ed32be5"
+    },
+    {
+      "path": "application/executionOrchestrator.js",
+      "sha256": "70504ccfc757693d2a2a9834501a2ada6c0a7ac781a8cf19ef7793ac76780d84"
+    },
+    {
+      "path": "application/executionQueue.js",
+      "sha256": "a762f1ba1414f81828b9c153e02f985b3d3f6daeb2b4633a2dec152ea4319a7d"
+    },
+    {
+      "path": "application/executionRecovery.js",
+      "sha256": "94cb34a2d96ce3de5758b558093498647a7462c94565d3b66d616934c428cdff"
+    },
+    {
+      "path": "application/hierarchyMessageRouter.js",
+      "sha256": "a75374414033c25e010e2240fd62149c1e419af302a78a6b78f4ecd83b85bd44"
+    },
+    {
+      "path": "application/humanCodeReview.js",
+      "sha256": "e28c24b087f7f9e5a6aba927508ba10788cfeebcc1fa44509924072e5d1fae51"
+    },
+    {
+      "path": "application/index.js",
+      "sha256": "cd9dd225860c37eef58551bad8e57da6d55674d97011d8b9da9c15e21187a18f"
+    },
+    {
+      "path": "application/linkEngineeringDecisions.js",
+      "sha256": "70ef764689a478910b9f17ab1ad256a0bbec0684f57b2254eb1147931c4fda14"
+    },
+    {
+      "path": "application/objectiveIntake.js",
+      "sha256": "1f2548cf8dc9a5df01950fca047808b6ae4fb59d7dedeaf6aff8c94ce43d96c5"
+    },
+    {
+      "path": "application/objectiveQuestions.js",
+      "sha256": "26eac0899ec9f9f9cb0445cdbf8f94f69c44121cd2adbd04093b5ef2ea28a593"
+    },
+    {
+      "path": "application/officeConfiguration.js",
+      "sha256": "a4baf077fd1b3e4941f316bda71c69642b677f0a1277141757cc95a8dde93611"
+    },
+    {
+      "path": "application/officeHeadCoordination.js",
+      "sha256": "5789c677f00e40bf4e697872a5a93b72fa18fb1bd8db9c6e5527744200a00eab"
+    },
+    {
+      "path": "application/officeHeadRouting.js",
+      "sha256": "6424ebda2fbe64ee3fa60a7aba2671152386014da9cc04a7a81917dbf20fd5bd"
+    },
+    {
+      "path": "application/officeWorkforceConfiguration.js",
+      "sha256": "6ad4d8759f9a003cf775696ba5843e09adc2ea341a38ed6b88a2f06e8bb053a1"
+    },
+    {
+      "path": "application/organizationalTaskMemory.js",
+      "sha256": "97b117776e92a1543191736ca3746ab266abded0f84004b970b311e9c9f104fd"
+    },
+    {
+      "path": "application/persistedPlanDecision.js",
+      "sha256": "c3e97be57f79e675f071865cfc063a96c137cb5844aa14ffa0d6f5e2330e2367"
+    },
+    {
+      "path": "application/persistReviewFindings.js",
+      "sha256": "e1a209335b4b49e1f15575b2fe9eaed33d379ae6004412a249cd42f6691de57f"
+    },
+    {
+      "path": "application/planApproval.js",
+      "sha256": "ba413a586cb3c595bc4bbfb36956eb84c9d0a344ba407069d4c31fafb3d3c25b"
+    },
+    {
+      "path": "application/ports.js",
+      "sha256": "2757c92f4bce3c123a037c28942bdc7cd080579a42821dc823862fdfa814c4d4"
+    },
+    {
+      "path": "application/positionWorkforceInput.js",
+      "sha256": "952e9d2f5e506548945540f007c0ba8ee81a73ce941db92568edc2a77001866c"
+    },
+    {
+      "path": "application/privacyControls.js",
+      "sha256": "cb7844b14a93c5cad7f6702bf0dc5b32b8230e06000dcc5ead599222371e0d41"
+    },
+    {
+      "path": "application/promptRegistry.js",
+      "sha256": "b98491c0df4599ff2a888aee94d0109e06c67d218bd6894f43dc206e7882a3e8"
+    },
+    {
+      "path": "application/providerCredentials.js",
+      "sha256": "f17f01f7cc0b953cb41bac90ebee74500910482fbd082d4e5376643bca1d302c"
+    },
+    {
+      "path": "application/providerFallback.js",
+      "sha256": "ba064f16e376031ddfa7ef15f65439e4fc5888ffae8af178149cb21d45dff765"
+    },
+    {
+      "path": "application/reviewEvidenceBundle.js",
+      "sha256": "efcc4f05c4aa004c1267a0ac4561eece89d97279ec3a974270b5ddd233a00fda"
+    },
+    {
+      "path": "application/selectedTaskExecution.js",
+      "sha256": "70e0a35d0f7a28964bc98fe39646ce3e1ccf536120ddb45e6041ebe06c2d7879"
+    },
+    {
+      "path": "application/stopTaskDebuggingSession.js",
+      "sha256": "977662d1777a3460dffd52b12492325e8ba5c3432aa86023393540fb6b32c638"
+    },
+    {
+      "path": "application/structuredEmployeeRuntime.js",
+      "sha256": "6f62883673d76c954c5061dd1ddab6ce4dc7e94b8b3bcab614aa337ee50f5a9a"
+    },
+    {
+      "path": "application/structuredEmployeeTaskAdapter.js",
+      "sha256": "aea8ae630884efbc44e5d2514cf2cf57bff4a86bd2fe1551a0ac73961afc8c5e"
+    },
+    {
+      "path": "application/structuredOutput.js",
+      "sha256": "94dcb1d747c5cefcabef5221c5d3c9e3d7d73b48749b05f08fc3612732574321"
+    },
+    {
+      "path": "application/taskAIRequestBudget.js",
+      "sha256": "e44351bc54027b005acfccdfe790ccab2efa05ea0cbb87b25ed88cb85e3a97c7"
+    },
+    {
+      "path": "application/taskCreation.js",
+      "sha256": "b85e066aadfed24e0af5221ec024e61e1bbb03f4c273a2fcc7668d1302b1c6cc"
+    },
+    {
+      "path": "application/taskExecutionFailureRecovery.js",
+      "sha256": "e103568dc35960ffbdf8b247200c6c0a055426a8d9c725bc269527a19bf4706a"
+    },
+    {
+      "path": "application/taskExecutionLifecycle.js",
+      "sha256": "3ef1771d49a859078e75cc5ea1904ffd258e2392cecb8906dcb12d87cfc87352"
+    },
+    {
+      "path": "application/taskExecutionReport.js",
+      "sha256": "487ccf7a4235cf0cc76979c4938588f0c499b964fa7b6c24acd8d85c89a41d84"
+    },
+    {
+      "path": "application/taskResultSubmission.js",
+      "sha256": "04c32b2094ad322b2f315233c9f1943dbfdfdf4a87e5328771df77f51fade834"
+    },
+    {
+      "path": "application/taskReview.js",
+      "sha256": "7a268d60c9d5ebba9d167637ada6c7131d07feee1e62737b7a25a7bfe45d7cda"
+    },
+    {
+      "path": "application/taskScheduler.js",
+      "sha256": "1a6f3f99a18dd895e91db4fb29c35ca98ced018fe833a1f1771884ba6d6c4ee6"
+    },
+    {
+      "path": "application/taskToolPermissionManagement.js",
+      "sha256": "6c64bd5aff26326d604b9009c9187b0e8b7ac1165e122d7d8a9503edca1c66e7"
+    },
+    {
+      "path": "application/taskUsageSummary.js",
+      "sha256": "9dbea046cbb1d84180d72989d1cfaddc315c587ab7a1d60e33ee9a01539db56a"
+    },
+    {
+      "path": "application/useCase.js",
+      "sha256": "a876f132b338cda508a3aca5ae91b92f4f933ccd3fc6836c8e9c123e13de5eeb"
+    },
+    {
+      "path": "application/verifyMemory.js",
+      "sha256": "236e1330282a78710f5b1179d852b3b68441fd049710a1c4949a9e8bf6105279"
+    },
+    {
+      "path": "application/workforceSkills.js",
+      "sha256": "c2b8381bd5b23fbed6f5bf0560a827066d94416990aaf603e80a2cb1fb0d1429"
+    },
+    {
+      "path": "constants.js",
+      "sha256": "2b03815c7f77ab47fb4b25275d134d97a251e73b7187407c065c857106499d2a"
+    },
+    {
+      "path": "domain/agentLifecycle.js",
+      "sha256": "9027f8362b77463a161859a5f58eedfe5dd3b5beb7b18e5e2aab371c5c232724"
+    },
+    {
+      "path": "domain/assignmentValidation.js",
+      "sha256": "803fc0853ae54ba44d7c887c4798e0d873eb62ef77369299d90f4a5e7613d317"
+    },
+    {
+      "path": "domain/codeExplanation.js",
+      "sha256": "21423e7de8c0cf5101b08f5ae2b26766e0675907c608ddfdfdfaaafcf6b7f380"
+    },
+    {
+      "path": "domain/departmentWorkforce.js",
+      "sha256": "3035557103712b9cb144ad64c35147d3887442ac2c803de414d4a36db23f80fb"
+    },
+    {
+      "path": "domain/engineeringReview.js",
+      "sha256": "7dcd860a4c4f3e6839610f2b2c751fe2204bd5953a8a78e0f375281e28a5031a"
+    },
+    {
+      "path": "domain/errors.js",
+      "sha256": "fccd11b810437d516ba31cc1559304e8345a19e37240cd6505bbb04f383b5a57"
+    },
+    {
+      "path": "domain/events.js",
+      "sha256": "2eb5afe25d434b39dba36a28537749a3c9d4a271f7d73985f880dac215f22757"
+    },
+    {
+      "path": "domain/executionControl.js",
+      "sha256": "3bbe154f694f9e47acc51c129ddba7878265ae7acaac30d98d4e2263830680f1"
+    },
+    {
+      "path": "domain/executionPlan.js",
+      "sha256": "425efbcf7d498b6de0ddab3bd69fc134c30ee933641aa2676dfae25071c393af"
+    },
+    {
+      "path": "domain/gameEngines.js",
+      "sha256": "cd2e6f6432309d6c16dc5f4e231f4726de4fbde66b722cc814c4f384126f4a4a"
+    },
+    {
+      "path": "domain/index.js",
+      "sha256": "f2782a0b086b8190d069c5680fb13afa19fe258894ce2c03a62467a97ee9b9dd"
+    },
+    {
+      "path": "domain/invariants.js",
+      "sha256": "d0c2c15aca10ef9ee76e549cb577d3163885e779ab86e36ed07a2f4c225664bf"
+    },
+    {
+      "path": "domain/memoryRetrieval.js",
+      "sha256": "5b96db8e574fd0e23f69c9c6a180f3a53eeb3be3f182b546997f4cf3c89aed18"
+    },
+    {
+      "path": "domain/objectiveLifecycle.js",
+      "sha256": "92a7a419c1ea09458ac55df33460a2d1fa38563a53ec6a96514f600da6bfb967"
+    },
+    {
+      "path": "domain/planApproval.js",
+      "sha256": "216c76da0d1fe139f250751a34df5812b720a5dd06e66db3be1e3d1282243956"
+    },
+    {
+      "path": "domain/positionCatalog.js",
+      "sha256": "686f20c42f0243246c1c31d6f9f823df0aadb942d559b789111b98110ee6e974"
+    },
+    {
+      "path": "domain/positionManifestAudit.js",
+      "sha256": "58f68ca51fee2643a1f7a71f80e55dcfc8de3af3dd2135ca7dc3114028dd02be"
+    },
+    {
+      "path": "domain/questionLifecycle.js",
+      "sha256": "6e1a43f4960ee915b6c1e41c665213c19c404466f1ae468b21a3ad10fe30ffb2"
+    },
+    {
+      "path": "domain/scopeMatch.js",
+      "sha256": "fa3ef7fa65d5164ff90adbd16891fa041f4d931b44152ed44e5c0ad34beb5e4a"
+    },
+    {
+      "path": "domain/taskAcceptanceCriteria.js",
+      "sha256": "7f697d31cf8df0cf969791689c22852d2ce40374ff8d185b334ec0b4b4c367f0"
+    },
+    {
+      "path": "domain/taskDependencies.js",
+      "sha256": "2fa587cce32a1cc501941fa9f32d8ac6e50cd7aab1a8e11ebf25cddd40a47c10"
+    },
+    {
+      "path": "domain/taskEscalation.js",
+      "sha256": "a7cf30f439aa1feb74656a62b89d5f75ab1c19a5edcd0bb1d9f423bf297800b9"
+    },
+    {
+      "path": "domain/taskLifecycle.js",
+      "sha256": "a7fb0015ada2f4312f239c3393f3fa94668d900e5c24ee0b8800f1fc4e72cc79"
+    },
+    {
+      "path": "domain/taskProgress.js",
+      "sha256": "7f1a08dd4d27f512650c195424d7a4adabb58b23cf129182559de2c2ab998e6a"
+    },
+    {
+      "path": "domain/taskResult.js",
+      "sha256": "9179ca8ee5f1aafdb287ce6cce2f0b61e32fad65f0d74cb6648fee8d3d5a3d84"
+    },
+    {
+      "path": "domain/taskRetryPolicy.js",
+      "sha256": "9c077272b469f78e4dd73fe138bc010e43dce6838c7b13eb53a8cd80c295fcce"
+    },
+    {
+      "path": "domain/values.js",
+      "sha256": "d94f02e9d23777022689121f1c3d8bf1f6306bb62291ee6d094dfcde362dbaaf"
+    },
+    {
+      "path": "infrastructure/AIUsageRecorder.js",
+      "sha256": "4984d782ae7ff04c6371604a95b3de164846b2851b839d908f6b5f2ea7f2c42b"
+    },
+    {
+      "path": "infrastructure/commandPolicy.js",
+      "sha256": "1e78881cfc8dca6f4fd11c53d345139e498e5381cdf2b13f1e03111aed503de8"
+    },
+    {
+      "path": "infrastructure/CommandRunner.js",
+      "sha256": "82fdf87d10cc8380fd9070faee6760abcfbef3f92e71952b68898bfcae6cc3bd"
+    },
+    {
+      "path": "infrastructure/gameEngineDetection.js",
+      "sha256": "2287bceaba67a0fa6d916a060af6ee8adffc8716bbad67d06ae9b58f2c974b2b"
+    },
+    {
+      "path": "infrastructure/GeminiAIProviderAdapter.js",
+      "sha256": "4798f9c827603cc5df0d31b50e5e4fe933b7747dcc91dcd8ecc2938f43bdf2ec"
+    },
+    {
+      "path": "infrastructure/GitStateAdapter.js",
+      "sha256": "31d719a2a955ffb632788a766ca6ba0169647b73e5beb36b0a1699db688b4329"
+    },
+    {
+      "path": "infrastructure/GitTaskWorkspaceAdapter.js",
+      "sha256": "baa3d67174b3f53fddf6e72540724f940e72d80d45b9a9dd21edfbb592889386"
+    },
+    {
+      "path": "infrastructure/index.js",
+      "sha256": "cc4619973cbfaad69486cd1ec43743fdec46eb900f69dbb5f670c1f9c627b673"
+    },
+    {
+      "path": "infrastructure/PersistedTaskToolsProvider.js",
+      "sha256": "ebb08d623732f04ce0152982f4e34f8928c80f7a7f63fbab3902eb8c46d5003e"
+    },
+    {
+      "path": "infrastructure/SecretStorageAdapter.js",
+      "sha256": "71ac2c59b343e62813eb56856f2a3eee68c0e098ea467c1113ae7d43b7a1669b"
+    },
+    {
+      "path": "infrastructure/sensitiveWorkspacePath.js",
+      "sha256": "cfa19b83bb8cf49c14a0c7cc0d20b2d38990a6506f7e01abe2402f48fc81bc04"
+    },
+    {
+      "path": "infrastructure/SqliteEventBus.js",
+      "sha256": "3013910f798cf6f1c05dad3f55e964898d15fbb30bcda81fedd3ccc2f8e23fd1"
+    },
+    {
+      "path": "infrastructure/SqliteUnitOfWork.js",
+      "sha256": "ddf5e5991fb243eac3a3d6069c57c0aee07b042f15901b39e6ec83ed7de1ea54"
+    },
+    {
+      "path": "infrastructure/TaskScopedTools.js",
+      "sha256": "75452962210e443e3254baa88292259cc3e5776688590f874853f027a5c5fb99"
+    },
+    {
+      "path": "infrastructure/VerificationPipeline.js",
+      "sha256": "d24c93f9bbb80c867dfe07ed5cd435dfd9e420daa33377aed7787dd1529d0f46"
+    },
+    {
+      "path": "infrastructure/WorkspaceFileAdapter.js",
+      "sha256": "0a79ffd8f284cd938ad2cc73f8d1f7c19cbbf4eed1fe7baf76ecb78c4fdc67bc"
+    },
+    {
+      "path": "infrastructure/workspacePathPolicy.js",
+      "sha256": "5bed20b0eeeb3874eaefaeeadbdea11e35f1f049daf9b7ebc92b71c0f365c9d1"
+    },
+    {
+      "path": "infrastructure/WorkspaceSnapshot.js",
+      "sha256": "a68d4d5be3531c337fdadd549feb68366a611c85693f5fb87fd9bfd5704b3ac4"
+    },
+    {
+      "path": "shared/agentLifecyclePolicy.js",
+      "sha256": "75953574035a7176cce7a810df7e48ebfb13043405087b4bbba53fdf94936d04"
+    },
+    {
+      "path": "shared/identifiers.js",
+      "sha256": "d0bcb979af6051f52cf3cd22938e6131c73b57e17d9383cd195a0f55edfeddc7"
+    },
+    {
+      "path": "shared/normalizeQuestionText.js",
+      "sha256": "cb42338d5f1af4576b1616e0b1d88d5d344b31b4a2a7fce4e4d1f8565aa16426"
+    },
+    {
+      "path": "shared/redactSecrets.js",
+      "sha256": "5a8ab8a453b0bf493cc6f3f81801c3e1e8e43914375bee29ff587ab1e9597cb5"
+    },
+    {
+      "path": "shared/taskToolPermissions.js",
+      "sha256": "5e4228764f544825f160b20699b11993a7b1a1033f6acba693d09ef848ba8ea4"
+    },
+    {
+      "path": "shared/workspaceFingerprint.js",
+      "sha256": "b36de127db604f3d15e2028231ec4f5f4b8dfdb2d2fa1e80d61c24187f7a9ed7"
+    },
+    {
+      "path": "src/core/ExecutionActivityFeed.js",
+      "sha256": "f74cde1aab41ece97f83c9c0d29082a53b4144f615e21e30a8c2261b2fc55838"
+    },
+    {
+      "path": "storage/DatabaseBackup.js",
+      "sha256": "a4a34fe3418c2a92203e1661577577c7d248eb498c506151e1bf8e06397f228f"
+    },
+    {
+      "path": "storage/DatabaseIntegrity.js",
+      "sha256": "cf0bd6d9b2148ec5b5c0fe7a8be703e9caeaff79e0d05719780a18880094c7b2"
+    },
+    {
+      "path": "storage/DataRetention.js",
+      "sha256": "bcb8e254a6c1e9fab5d1cd6682672646dad3a69f521640e70c378135c4308aea"
+    },
+    {
+      "path": "storage/index.js",
+      "sha256": "4664c74baae87fc99f476c7318a51826a73e254c5c53f9bfb7e277fb79b9c230"
+    },
+    {
+      "path": "storage/migrations.js",
+      "sha256": "b6299c51730363fc03243301239acbb79c67837bb0a84ce273f069b8c5c82e28"
+    },
+    {
+      "path": "storage/repositories/AIUsageRepository.js",
+      "sha256": "43a714ba514e00a93a11d67594dfb133ec91d4c2afd7a1894d61574ce632783d"
+    },
+    {
+      "path": "storage/repositories/AuditLogRepository.js",
+      "sha256": "2f4fd1c78bfd8d70eec58ff8dcf6a18f68f5e7d81a9be0950cbed3fb95aef613"
+    },
+    {
+      "path": "storage/repositories/BaseSqliteRepository.js",
+      "sha256": "909fae16c7a8ecf1bb8f4c341605f9be69a5d83cc994042a0cffd920da45f25d"
+    },
+    {
+      "path": "storage/repositories/CoreRepositories.js",
+      "sha256": "99d8be9cf45e5e52e5bcf18fa0cd17d7de8da2d9824519d99aa9c0b702ff751d"
+    },
+    {
+      "path": "storage/repositories/DebuggingSessionRepository.js",
+      "sha256": "b09ed8816b1d9151fb304e6f5f968da9332ee9bf47008dd9877984658fe89ca5"
+    },
+    {
+      "path": "storage/repositories/EngineeringDecisionRepository.js",
+      "sha256": "2c7a47784d0a8797aee149278b6ad8170b283e1288bbca44392a37d168879138"
+    },
+    {
+      "path": "storage/repositories/ExecutionQueueRepository.js",
+      "sha256": "1f3545553134651e5131c5828c61f41805072cbeaddce1465a01299dc3ea8ec2"
+    },
+    {
+      "path": "storage/repositories/index.js",
+      "sha256": "b143d9dfb8a2a89309281294d620485b89715f7d593fabcfbb0a2c08dce5a4fb"
+    },
+    {
+      "path": "storage/repositories/TaskDependencyRepository.js",
+      "sha256": "58f6019192f687b2cab1e4070194753d0d92fe14bf7f4d62fca0a59f9db7dcb7"
+    },
+    {
+      "path": "storage/schema.js",
+      "sha256": "6df920fa90b85e4bb199e84d5fa00cc12b8e1292f4d59378e48a729d38ccfa10"
+    },
+    {
+      "path": "storage/SqliteCompat.js",
+      "sha256": "498eb97eca8a1f79c61c1d81cbeb58eb950ff68874bdce34bbc788ebe0cc9263"
+    },
+    {
+      "path": "storage/SqliteConnection.js",
+      "sha256": "3c35aee252fbff7641bcc4ff1809ab70c0fb1823e259dae1cddac286d6dcfb6c"
+    },
+    {
+      "path": "storage/UpgradeCompatibility.js",
+      "sha256": "adb10358e4f47633dada247188cb0b017f68dd2e07a6b32109512c5f9f54d85b"
+    }
+  ]
+}
